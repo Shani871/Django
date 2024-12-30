@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page </title>
+</head>
+<body style="text-align: center;">
+    <h1>Welcome to My Website </h1> 
+    {% if isActive %}
+   <div>
+
+    {% include 'navbar.html' %}
+   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam enim itaque hic voluptates expedita ut, facilis eos nam, in porro nisi? Fugiat nostrum veritatis at ex molestiae ab dolores voluptate doloremque, odit illum, perferendis aut hic modi quibusdam sunt atque debitis sequi distinctio laudantium aliquam necessitatibus deserunt explicabo minus. Facere!</p>
+    <form action="/index/" method="post">
+        <input type="text" name="name" placeholder="Enter Name">
+        <button>Send</button>
+    </form>
+    <button>Contact US</button>
+    <h1>Nmae of cources: {{name}}</h1>
+    <h1>List Of Section :{{list}}</h1>
+    <hr>
+     <h1>Studnet deatiles :{{student.Name}}</h1>
+     <h1>Studnet RollNo :{{student.Roll}}</h1>
+     <h1>Studnet College :{{student.College}}</h1>
+   </div>
+   {%endif%}
+</body>
+</html>
