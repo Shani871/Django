@@ -1,6 +1,6 @@
 # Employee Management System and Testimonial Page
 
-A Django-based web application for managing employees and collecting testimonials/feedback. This project allows users to perform CRUD operations for employees and provides a feature to collect and display user feedback as testimonials.
+A Django-based web application for managing employees and collecting testimonials/feedback. This project allows users to perform CRUD operations for employees and provides a feature to collect and display testimonials.
 
 ## Table of Contents
 - [Features](#features)
@@ -41,4 +41,4 @@ A Django-based web application for managing employees and collecting testimonial
 ### Steps to Install
 1. Clone the repository:
    ```bash
-   https://github.com/Shani871/Django
+   git clone https://github.com/Shani871/Django
