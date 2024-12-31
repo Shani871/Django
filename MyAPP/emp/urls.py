@@ -10,6 +10,7 @@ urlpatterns = [
    path("delete-emp/<int:emp_id>",emp_delete),
     path("update-emp/<int:emp_id>", update_emp, name="edit_emp"),
    path("about/",about),
+   path("testimonials/",testimonials),
 
     
 ]

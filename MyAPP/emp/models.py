@@ -9,3 +9,10 @@ class Emp(models.Model):
     working = models.BooleanField(default=True)
     department = models.CharField(max_length=100)
     
+class Testimonial(models.Model):
+    name = models.CharField(max_length=100)
+    Testimonial = models.TextField()
+    picture = models.ImageField(upload_to='images/')
+    rating = models.IntegerField()
+    def __str__(self):
+        return self.Testimonial

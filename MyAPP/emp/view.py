@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, get_object_or_404
-from .models import Emp
+from .models import Emp ,Testimonial
 
 # Create your views here.
 def emp_home(request):
@@ -73,3 +73,10 @@ def update_emp(request, emp_id):
 
 def about(request):
     return render(request, 'emp/about.html')
+
+def testimonials(request):
+    testi = Testimonial.objects.all()
+    return render(request, 'emp/testimonials.html'
+                  ,{
+        'testi': testi
+    })

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
 def home(request):
     # print("test the django Project ")
 
@@ -33,3 +34,4 @@ def about(request):
 def services(request):
     # return HttpResponse(index.html)
     return render(request, 'services.html',{})
+
