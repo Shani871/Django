@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Emp ,Testimonial
+from .form import FeedbackForm
 
 # Create your views here.
 def emp_home(request):
@@ -80,3 +81,23 @@ def testimonials(request):
                   ,{
         'testi': testi
     })
+
+def feedback(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            name = form.cleaned_data['name']
+            feedback = form.cleaned_data['feedback']
+            
+            # Save the data
+            t = Testimonial()
+            t.email = email
+            t.name = name
+            t.feedback = feedback
+            t.save()
+            
+            return redirect('/emp/feedback/')  # Redirect to the feedback page
+    else:
+        form = FeedbackForm()
+    return render(request, 'emp/feedback.html', {'form': form})  # Correct template path¸¸

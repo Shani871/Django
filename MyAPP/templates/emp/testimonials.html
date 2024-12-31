@@ -19,6 +19,7 @@
                 <thead>
                   <tr>
                     <th>#SNO.</th>
+                    <th>Picture</th>
                     <th>Name</th>
                     <th>Testimonials</th>
                     <th>Rating</th>
@@ -28,14 +29,12 @@
                   {% for e in testi %}
                   <tr>
                     <td>{{ forloop.counter }}</td> <!-- Counter for serial number -->
+                    <td><img src="/media/{{e.picture}}" style="width: 150px; height: 100px;"  alt=""></td>
                     <td>{{ e.name }}</td>
-                    <td>{{e.testimonial}}</td>
+                    <td>{{e.Testimonial}}</td>
                     <td>{{e.rating}}</td>
+
                     
-                    <td>
-                      <a href="/emp/delete-emp/{{ e.id }}" class="btn btn-danger btn-sm">Delete</a>
-                      <a href="{% url 'edit_emp' e.id %}" class="btn btn-dark btn-sm">Edit</a>
-                    </td>
                   </tr>
                   {% endfor %}
                 </tbody>
