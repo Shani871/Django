@@ -41,5 +41,4 @@ A Django-based web application for managing employees and collecting testimonial
 ### Steps to Install
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/employee-management-system.git
-   cd employee-management-system
+   https://github.com/Shani871/Django
